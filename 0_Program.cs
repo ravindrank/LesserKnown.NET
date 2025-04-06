@@ -6,7 +6,10 @@
         {
 
             var pollyTest = new PollyDemo();
-            pollyTest.Run();
+            //pollyTest.Run();
+
+            var pInvokeTest = new PInvoke();
+            pInvokeTest.Run();
         }
     }
 }
