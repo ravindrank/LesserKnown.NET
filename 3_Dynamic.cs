@@ -1,12 +1,4 @@
-﻿using Microsoft.VisualBasic;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-// from https://learn.microsoft.com/en-us/dotnet/csharp/advanced-topics/interop/using-type-dynamic
+﻿// Source from https://learn.microsoft.com/en-us/dotnet/csharp/advanced-topics/interop/using-type-dynamic
 
 namespace LesserKnown.NET
 {
