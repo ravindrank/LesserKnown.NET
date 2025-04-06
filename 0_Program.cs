@@ -9,6 +9,9 @@ public class Program
         //pollyTest.Run();
 
         var pInvokeTest = new PInvoke();
-        pInvokeTest.Run();
+        //pInvokeTest.Run();
+
+        var exprTest = new Exprs();
+        exprTest.Run();
     }
 }
