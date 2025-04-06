@@ -5,11 +5,11 @@ using System.Xml.Linq;
 
 namespace LesserKnown.NET
 {
-    public class SpanAndMemory
+    public class SpanT
     {
         public void Run()
         {
-            //  These types allow efficient slicing and manipulation of memory without unnecessary allocations.
+            // Span and Memory types allow efficient slicing and manipulation of memory without unnecessary allocations.
 
             // System.Span<T>, a type that's used to access a contiguous region of memory.
             // A Span<T> instance can be backed by an array of type T, a buffer allocated

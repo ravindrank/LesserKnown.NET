@@ -13,5 +13,11 @@ public class Program
 
         var exprTest = new Exprs();
         exprTest.Run();
+
+        var spanTest = new SpanT();
+        spanTest.Run();
+
+        var memTest = new MemoryT();
+        memTest.Run();
     }
 }

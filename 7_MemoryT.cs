@@ -11,8 +11,6 @@
             // can be backed by an array of type T or a memory manager. As it can be stored on the
             // managed heap, Memory<T> has none of the limitations of Span<T>.
 
-
-
             string countriesStr = "India Belgium Australia USA UK Netherlands";
             IEnumerable<ReadOnlyMemory<char>> countries = ExtractStrings(countriesStr.AsMemory());
 
