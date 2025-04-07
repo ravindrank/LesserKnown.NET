@@ -11,6 +11,8 @@ namespace LesserKnown.NET
         {
             // Span and Memory types allow efficient slicing and manipulation of memory without unnecessary allocations.
 
+            // Source: https://www.codemag.com/Article/2207031/Writing-High-Performance-Code-Using-SpanT-and-MemoryT-in-C
+
             // System.Span<T>, a type that's used to access a contiguous region of memory.
             // A Span<T> instance can be backed by an array of type T, a buffer allocated
             // with stackalloc, or a pointer to unmanaged memory. Because it has to be
@@ -23,7 +25,7 @@ namespace LesserKnown.NET
             // supports slicing, you can make it point to any contiguous region within the
             // array.The following code snippet shows how you can use a Span<T> to point to a
             // slice of three elements within the array
-            
+
             int[] numberArray = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             Span<int> slice = new Span<int>(numberArray, 2, 3);
 
