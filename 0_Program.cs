@@ -19,5 +19,20 @@ public class Program
 
         var memTest = new MemoryT();
         memTest.Run();
+
+        //Fody Demo
+        Person person = new Person
+        {
+            FirstName = "John",
+            LastName = "Doe"
+        };
+
+
+        Person p2 = new Person()
+        {
+            FirstName = "Ravi"
+        };
+
+        Person p3 = new Person();
     }
 }
