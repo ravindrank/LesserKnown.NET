@@ -30,3 +30,38 @@ public class MessagePackJsonDemo
     public int Age { get; set; }
     public string Name { get; set; }
 }
+
+public class  MpDemo
+{
+    
+    public void Run()
+    {
+        MessagePackBinaryDemo mc = new MessagePackBinaryDemo
+        {
+            Age = 50,
+            FirstName = "Bill",
+            LastName = "Yeates",
+        };
+
+        byte[] bytes = MessagePackSerializer.Serialize(mc);
+        MessagePackBinaryDemo mcd = MessagePackSerializer.Deserialize<MessagePackBinaryDemo>(bytes);
+
+        // You can dump MessagePack binary blobs to human readable json.
+        // Using indexed keys (as opposed to string keys) will serialize to MessagePack arrays,
+        // hence property names are not available.
+
+        var json = MessagePackSerializer.ConvertToJson(bytes);
+        // Console.WriteLine(json);
+
+        MessagePackJsonDemo mc2 = new MessagePackJsonDemo
+        {
+            Age = 40,
+            Name = "John",
+        };
+
+        byte[] bytes2 = MessagePackSerializer.Serialize(mc2);
+        MessagePackJsonDemo mcd2 = MessagePackSerializer.Deserialize<MessagePackJsonDemo>(bytes2);
+        var json2 = MessagePackSerializer.ConvertToJson(bytes2);
+        Console.WriteLine(json2);
+    }
+}
