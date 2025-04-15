@@ -6,6 +6,7 @@ public class Program
 {
     static void Main(string[] args)
     {
+        Console.WriteLine("--------------------------------------------- DEMO START ---------------------------------------------");
 
         var pollyTest = new PollyDemo();
         //pollyTest.Run();
@@ -14,28 +15,28 @@ public class Program
         //pInvokeTest.Run();
 
         var exprTest = new Exprs();
-        exprTest.Run();
+        //exprTest.Run();
 
         var spanTest = new SpanT();
-        spanTest.Run();
+        //spanTest.Run();
 
         var memTest = new MemoryT();
-        memTest.Run();
+        //memTest.Run();
 
         //Fody Demo
-        Person person = new Person
-        {
-            FirstName = "John",
-            LastName = "Doe"
-        };
 
+        //Person person = new Person
+        //{
+        //    FirstName = "John",
+        //    LastName = "Doe"
+        //};
 
-        Person p2 = new Person()
-        {
-            FirstName = "Ravi"
-        };
+        //Person p2 = new Person()
+        //{
+        //    FirstName = "Ravi"
+        //};
 
-        Person p3 = new Person();
+        //Person p3 = new Person();
 
 
         // Message Pack Demo
@@ -55,7 +56,7 @@ public class Program
         // hence property names are not available.
 
         var json = MessagePackSerializer.ConvertToJson(bytes);
-        Console.WriteLine(json);
+        // Console.WriteLine(json);
         
         MessagePackJsonDemo mc2 = new MessagePackJsonDemo
         {
@@ -66,6 +67,14 @@ public class Program
         byte[] bytes2 = MessagePackSerializer.Serialize(mc2);
         MessagePackJsonDemo mcd2 = MessagePackSerializer.Deserialize<MessagePackJsonDemo>(bytes2);
         var json2 = MessagePackSerializer.ConvertToJson(bytes2);
-        Console.WriteLine(json2);
+        // Console.WriteLine(json2);
+
+        // Dynamic code gen
+
+        DynamicCodeGen dynamicCodeGen = new DynamicCodeGen();
+        dynamicCodeGen.Run();
+
+
+        Console.WriteLine("---------------------------------------------- DEMO END ----------------------------------------------");
     }
 }

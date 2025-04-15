@@ -24,6 +24,7 @@
 	</ItemGroup>
   <ItemGroup>
     <PackageReference Include="Polly" Version="8.5.2" />
+    <PackageReference Include="System.CodeDom" Version="9.0.4" />
   </ItemGroup>
 
 </Project>

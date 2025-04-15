@@ -6,6 +6,7 @@ public class PollyDemo
 {
     public void Run()
     {
+        Console.WriteLine("------------------------------------------ POLLY DEMO START ------------------------------------------");
         var retryPolicy = Policy
             .Handle<Exception>()
             .Retry(10, (exception, timeSpan) =>
@@ -18,6 +19,7 @@ public class PollyDemo
             Console.WriteLine("Executing risky operation...");
             throw new Exception("Simulated failure");
         });
+        Console.WriteLine("------------------------------------------ POLLY DEMO END ------------------------------------------");
     }        
 
 }
