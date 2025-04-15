@@ -24,7 +24,7 @@ public class Program
         //Fody Demo
 
         FodyDemo fodyDemo = new FodyDemo();
-        //fodyDemo.Run();
+        fodyDemo.Run();
 
 
         // Message Pack Demo
@@ -39,6 +39,8 @@ public class Program
 
         HumanizerDemo humanizer = new HumanizerDemo();  
         humanizer.Run();
+        humanizer = null;
+
 
         Util.PrintDemoEnd("MainDemo");
     }

@@ -15,8 +15,6 @@ public class HumanizerDemo : MainDemo
 
         // Humanizer is a library that converts enums, dates, timespans, and other types to human readable strings.  
 
-        Util.PrintDemoStart(DemoName);
-
         TimeSpan timeSpan = TimeSpan.FromDays(1);
         Console.WriteLine(timeSpan.Humanize()); // Output: "one day"   
         Console.WriteLine(DateTime.UtcNow.AddHours(-30).Humanize());
@@ -40,7 +38,7 @@ public class HumanizerDemo : MainDemo
         Console.WriteLine("some_title".Dasherize());
         Console.WriteLine("some_title".Hyphenate());
 
-        Util.PrintDemoEnd(DemoName);
+        EndDemo();
     }
 }
 

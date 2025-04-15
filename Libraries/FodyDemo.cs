@@ -15,9 +15,12 @@ public class Person : INotifyPropertyChanged
     public void OnNameChanged() => Console.WriteLine($"Name Set to:{Name}");
 }
 
-public class FodyDemo
+public class FodyDemo : MainDemo
 {
-
+    public FodyDemo()
+    {
+        DemoName = GetType().Name;
+    }
     public void Run()
     {
         Person person = new Person
@@ -32,5 +35,7 @@ public class FodyDemo
         };
 
         Person p3 = new Person();
+
+        EndDemo();
     }
 }

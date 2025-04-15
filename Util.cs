@@ -34,6 +34,12 @@ public class MainDemo
     public MainDemo()
     {
         DemoName = GetType().Name;
+        Util.PrintDemoStart(DemoName);
+    }
+
+    public void EndDemo()
+    {
+        Util.PrintDemoEnd(DemoName);
     }
     public void Run()
     {
