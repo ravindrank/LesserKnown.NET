@@ -1,12 +1,10 @@
-﻿using MessagePack;
-
-namespace LesserKnown.NET;
+﻿namespace LesserKnown.NET;
 
 public class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("--------------------------------------------- DEMO START ---------------------------------------------");
+        Util.PrintDemoStart("MainDemo");
 
         var pollyTest = new PollyDemo();
         //pollyTest.Run();
@@ -42,6 +40,6 @@ public class Program
         HumanizerDemo humanizer = new HumanizerDemo();  
         humanizer.Run();
 
-        Console.WriteLine("---------------------------------------------- DEMO END ----------------------------------------------");
+        Util.PrintDemoEnd("MainDemo");
     }
 }
