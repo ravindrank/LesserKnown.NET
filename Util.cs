@@ -13,6 +13,7 @@ public static class Util
         int chars = (Console.WindowWidth - demoString.Length) / 2;
         string padding = new string('-', chars);
         Console.WriteLine(padding + demoString + padding);
+        Console.WriteLine();
     }
 
     public static void PrintDemoStart(string demoName)
@@ -43,6 +44,6 @@ public class MainDemo
     }
     public void Run()
     {
-       
+        EndDemo(); 
     }
 }

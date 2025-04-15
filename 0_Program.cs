@@ -1,4 +1,6 @@
-﻿namespace LesserKnown.NET;
+﻿using LesserKnown.NET.Tips;
+
+namespace LesserKnown.NET;
 
 public class Program
 {
@@ -41,7 +43,8 @@ public class Program
         humanizer.Run();
         humanizer = null;
 
-
+        CancTokensDemo cancTokensDemo = new CancTokensDemo();
+        cancTokensDemo.Run();
         Util.PrintDemoEnd("MainDemo");
     }
 }
