@@ -11,7 +11,7 @@ namespace LesserKnown.NET;
 /// 
 //// https://learn.microsoft.com/en-us/dotnet/framework/reflection-and-codedom/how-to-create-a-class-using-codedom
 // DynamicRun https://github.com/laurentkempe/DynamicRun
-class DynamicCodeGen
+public class DynamicCodeGen
 {
     /// <summary>
     /// Define the compile unit to use for code generation.
@@ -25,14 +25,9 @@ class DynamicCodeGen
     CodeTypeDeclaration targetClass;
 
     /// <summary>
-    /// The name of the file to contain the source code.
-    /// </summary>
-    private const string outputFileName = "SampleCode.cs";
-
-    /// <summary>
     /// Define the class.
     /// </summary>
-    public DynamicCodeGen()
+    public void Initialize()
     {
         targetUnit = new CodeCompileUnit();
         CodeNamespace samples = new CodeNamespace("Shape");
@@ -246,7 +241,7 @@ class DynamicCodeGen
         }
     }
 
-    public bool CompileCSharpCode(string sourceFile, string exeFile)
+    public void CompileCSharpCode(string sourceFile, string exeFile)
     {
         CSharpCodeProvider provider = new CSharpCodeProvider();
 
@@ -267,8 +262,8 @@ class DynamicCodeGen
         cp.GenerateInMemory = false;
 
         // Invoke compilation.
-        CompilerResults cr = provider.CompileAssemblyFromFile(cp, sourceFile);
-
+        // CompilerResults cr = provider.CompileAssemblyFromFile(cp, sourceFile);
+        /*
         if (cr.Errors.Count > 0)
         {
             // Display compilation errors.
@@ -293,14 +288,22 @@ class DynamicCodeGen
         {
             return true;
         }
+        */
     }
+}
+
+
+public class DynamicCodeGenDemo : MainDemo
+{
 
     /// <summary>
     /// Create the CodeDOM graph and generate the code.
     /// </summary>
     public void Run()
     {
+        const string outputFileName = "SampleCode.cs";
         DynamicCodeGen sample = new DynamicCodeGen();
+        sample.Initialize();
         sample.AddFields();
         sample.AddProperties();
         sample.AddMethod();
@@ -308,10 +311,11 @@ class DynamicCodeGen
         sample.AddEntryPoint();
         sample.GenerateCSharpCode(outputFileName);
         Console.WriteLine($"{outputFileName} generated.");
-        bool result = sample.CompileCSharpCode(outputFileName, "SampleCode.exe");
+        // bool result = sample.CompileCSharpCode(outputFileName, "SampleCode.exe");
         //if (result)
         //    Console.WriteLine("Sample.exe generated successfully.");
         //else
         //    Console.WriteLine("Sample.exe generation failed.");
+        EndDemo();
     }
 }

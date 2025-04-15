@@ -24,14 +24,16 @@ internal static class NativeMethods
         IntPtr hWnd, string lpText, string lpCaption, uint uType);
 }
 
-public class PInvoke
+public class PInvokeDemo:MainDemo
 {
     public void Run()
     {
         MySystemTime sysTime = new MySystemTime();
-        NativeMethods.GetSystemTime(sysTime);
-
+        NativeMethods.GetSystemTime(sysTime);        
         string dt = $"System time is: \nYear: {sysTime.wYear}\nMonth: {sysTime.wMonth}\nDayOfWeek: {sysTime.wDayOfWeek}\nDay: {sysTime.wDay}";
+        Console.WriteLine("Click OK to close the Demo Box and continue!");
         NativeMethods.MessageBox(IntPtr.Zero, dt, "Platform Invoke Example", 0);
+
+        EndDemo();
     }
 }

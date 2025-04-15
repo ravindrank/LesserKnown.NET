@@ -6,40 +6,35 @@ public class Program
     {
         Util.PrintDemoStart("MainDemo");
 
-        var pollyTest = new PollyDemo();
-        //pollyTest.Run();
+        var pollyTestDemo = new PollyDemo();
+        pollyTestDemo.Run();
 
-        var pInvokeTest = new PInvoke();
-        //pInvokeTest.Run();
+        var pInvokeTestDemo = new PInvokeDemo();
+        pInvokeTestDemo.Run();
 
-        var exprTest = new Exprs();
-        //exprTest.Run();
+        var exprTestDemo = new ExprsDemo();
+        exprTestDemo.Run();
 
-        var spanTest = new SpanT();
-        //spanTest.Run();
+        var spanTestDemo = new SpanTDemo();
+        spanTestDemo.Run();
 
-        var memTest = new MemoryT();
-        //memTest.Run();
+        var memTestDemo = new MemoryTDemo();
+        memTestDemo.Run();
 
         //Fody Demo
-
         FodyDemo fodyDemo = new FodyDemo();
         fodyDemo.Run();
 
-
         // Message Pack Demo
-
         MpDemo mpDemo = new MpDemo();   
-        //mpDemo.Run();
+        mpDemo.Run();
 
-        // Dynamic code gen
+        // Dynamic code gen Demo
+        DynamicCodeGenDemo dynamicCodeGenDemo = new DynamicCodeGenDemo();
+        dynamicCodeGenDemo.Run();
 
-        DynamicCodeGen dynamicCodeGen = new DynamicCodeGen();
-        // dynamicCodeGen.Run();
-
-        HumanizerDemo humanizer = new HumanizerDemo();  
-        humanizer.Run();
-        humanizer = null;
+        HumanizerDemo humanizerDemo = new HumanizerDemo();
+        humanizerDemo.Run();
 
         CancTokensDemo cancTokensDemo = new CancTokensDemo();
         cancTokensDemo.Run();

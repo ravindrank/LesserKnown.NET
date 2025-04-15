@@ -3,7 +3,7 @@
 namespace LesserKnown.NET;
 
 // Source: https://learn.microsoft.com/en-us/dotnet/csharp/advanced-topics/expression-trees/expression-trees-interpreting
-public class Exprs
+public class ExprsDemo: MainDemo
 {
     public void Run()
     {
@@ -54,5 +54,6 @@ public class Exprs
             var right = (ParameterExpression)additionBody.Right;
             Console.WriteLine($"\tParameter Type: {right.Type.ToString()}, Name: {right.Name}");
         }
+        EndDemo();
     }
 }

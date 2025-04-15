@@ -2,14 +2,14 @@
 
 namespace LesserKnown.NET;
 
-public class PollyDemo
+public class PollyDemo: MainDemo
 {
+    const int retryCount = 10;
     public void Run()
     {
-        Console.WriteLine("------------------------------------------ POLLY DEMO START ------------------------------------------");
         var retryPolicy = Policy
             .Handle<Exception>()
-            .Retry(10, (exception, timeSpan) =>
+            .Retry(retryCount, (exception, timeSpan) =>
             {
                 Console.WriteLine($"Retrying due to: {exception.Message}");
             });
@@ -17,9 +17,10 @@ public class PollyDemo
         {
             // Simulate a method that may fail
             Console.WriteLine("Executing risky operation...");
-            throw new Exception("Simulated failure");
+
+            //throw new Exception("Simulated failure");
         });
-        Console.WriteLine("------------------------------------------ POLLY DEMO END ------------------------------------------");
+        EndDemo();
     }        
 
 }

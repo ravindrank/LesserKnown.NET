@@ -1,6 +1,6 @@
 ﻿namespace LesserKnown.NET
 {
-    public class MemoryT
+    public class MemoryTDemo:MainDemo
     {
         //Source: https://www.codemag.com/Article/2207031/Writing-High-Performance-Code-Using-SpanT-and-MemoryT-in-C
 
@@ -17,7 +17,7 @@
             var data = ExtractStrings(countriesStr.AsMemory());
             foreach (var str in data)
                 Console.WriteLine(str);
-
+            EndDemo();
         }
         public static IEnumerable<ReadOnlyMemory<char>> ExtractStrings(ReadOnlyMemory<char> c)
         {

@@ -5,7 +5,7 @@ using System.Xml.Linq;
 
 namespace LesserKnown.NET
 {
-    public class SpanT
+    public class SpanTDemo:MainDemo
     {
         public void Run()
         {
@@ -71,8 +71,8 @@ namespace LesserKnown.NET
             unsafe
             {
                 span5 = new Span<byte>(nativeMemory.ToPointer(), 100);
-            }            
-
+            }
+            EndDemo();
         }
     }
 }

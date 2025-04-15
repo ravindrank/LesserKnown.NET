@@ -31,9 +31,9 @@ public class MessagePackJsonDemo
     public string Name { get; set; }
 }
 
-public class  MpDemo
+public class MpDemo : MainDemo
 {
-    
+
     public void Run()
     {
         MessagePackBinaryDemo mc = new MessagePackBinaryDemo
@@ -63,5 +63,7 @@ public class  MpDemo
         MessagePackJsonDemo mcd2 = MessagePackSerializer.Deserialize<MessagePackJsonDemo>(bytes2);
         var json2 = MessagePackSerializer.ConvertToJson(bytes2);
         Console.WriteLine(json2);
+
+        EndDemo();
     }
 }
