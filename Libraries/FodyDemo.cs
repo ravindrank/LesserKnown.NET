@@ -17,10 +17,6 @@ public class Person : INotifyPropertyChanged
 
 public class FodyDemo : MainDemo
 {
-    public FodyDemo()
-    {
-        DemoName = GetType().Name;
-    }
     public void Run()
     {
         Person person = new Person

@@ -1,6 +1,4 @@
-﻿using LesserKnown.NET.Tips;
-
-namespace LesserKnown.NET;
+﻿namespace LesserKnown.NET;
 
 public class Program
 {

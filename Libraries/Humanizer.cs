@@ -4,11 +4,6 @@ namespace LesserKnown.NET;
 
 public class HumanizerDemo : MainDemo
 {  
-    public HumanizerDemo()
-    {
-        DemoName = GetType().Name;
-    }
-
     public void Run()
     {
         // https://github.com/Humanizr/Humanizer  
