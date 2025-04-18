@@ -1,8 +1,57 @@
-﻿
-namespace LesserKnown.NET;
-
-public class CancTokensDemo:MainDemo
+﻿namespace LesserKnown.NET;
+public class CancTokensDemo : MainDemo
 {
+
+    static readonly HttpClient httpClient = new HttpClient();
+    static readonly CancellationTokenSource cancTokenSource = new CancellationTokenSource();
+
+    public static async Task DownloadDataAsync(string url, CancellationToken cancToken)
+    {
+        try
+        {
+            Console.WriteLine($"Downloading data from {url}...");
+            HttpResponseMessage response = await httpClient.GetAsync(url, cancToken);
+            byte[] content = await response.Content.ReadAsByteArrayAsync(cancToken);
+            Console.WriteLine($"Downloaded {content.Length} bytes from {url}.");
+        }
+        catch (OperationCanceledException)
+        {
+            Console.WriteLine($"Download from {url} was cancelled.");
+            throw;
+        }
+    }
+
+    public async Task Run()
+    {
+        Console.WriteLine("Press ENTER to cancel...");
+#pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
+        Task.Run(() =>
+        {
+            if (Console.ReadKey().Key == ConsoleKey.Enter)
+            {
+                cancTokenSource.Cancel();
+            }
+        });
+#pragma warning restore CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
+
+        try
+        {
+            await DownloadDataAsync("http://tinycorelinux.net/16.x/x86/release/Core-16.0.iso", cancTokenSource.Token);
+        }
+        catch (OperationCanceledException)
+        {
+            Console.WriteLine("Operation cancelled.");
+        }
+        finally
+        {
+            cancTokenSource.Dispose();
+        }
+
+        Console.WriteLine("Application ending.");
+        EndDemo();
+    }
+}
+
     
     // Source : https://codewithmukesh.com/blog/20-tips-from-a-senior-dotnet-developer/#7-cancellation-tokens-are-important
 
@@ -61,4 +110,4 @@ public class CancTokensDemo:MainDemo
     // Here, the loop checks stoppingToken.IsCancellationRequested to exit gracefully instead of continuing indefinitely.
     */
     
-}
+

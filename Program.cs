@@ -1,8 +1,12 @@
-﻿namespace LesserKnown.NET;
+﻿using BenchmarkDotNet.Running;
+using System.Diagnostics;
+using System.Numerics;
+
+namespace LesserKnown.NET;
 
 public class Program
 {
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
         Util.PrintDemoStart("MainDemo");
 
@@ -27,7 +31,7 @@ public class Program
 
         // Message Pack Demo
         MessagePackDemo mpDemo = new MessagePackDemo();   
-        mpDemo.Run();
+        //mpDemo.Run();
 
         // Dynamic code gen Demo
         DynamicCodeGenDemo dynamicCodeGenDemo = new DynamicCodeGenDemo();
@@ -37,7 +41,16 @@ public class Program
         //humanizerDemo.Run();
 
         CancTokensDemo cancTokensDemo = new CancTokensDemo();
-        //cancTokensDemo.Run();
+        await cancTokensDemo.Run();
+
+        // If you run in Debug mode: you will see below message
+        //    * Assembly LesserKnown.NET which defines benchmarks is non-optimized
+        // Benchmark was built without optimization enabled(most probably a DEBUG configuration). Please, build it in RELEASE.
+        // If you want to debug the benchmarks, please see https://benchmarkdotnet.org/articles/guides/troubleshooting.html#debugging-benchmarks.
+
+        // Switch to Release mode before calling
+        BenchMarkRunnerDemo benchMarkRunnerDemo = new BenchMarkRunnerDemo();
+        //benchMarkRunnerDemo.Run();
 
         Util.PrintDemoEnd("MainDemo");
     }
