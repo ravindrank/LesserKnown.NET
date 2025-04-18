@@ -31,7 +31,7 @@ public class MessagePackJsonDemo
     public string Name { get; set; }
 }
 
-public class MpDemo : MainDemo
+public class MessagePackDemo : MainDemo
 {
 
     public void Run()
@@ -51,7 +51,7 @@ public class MpDemo : MainDemo
         // hence property names are not available.
 
         var json = MessagePackSerializer.ConvertToJson(bytes);
-        // Console.WriteLine(json);
+        Console.WriteLine(json);
 
         MessagePackJsonDemo mc2 = new MessagePackJsonDemo
         {

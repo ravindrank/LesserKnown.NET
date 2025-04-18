@@ -18,7 +18,7 @@ public class PollyDemo: MainDemo
             // Simulate a method that may fail
             Console.WriteLine("Executing risky operation...");
 
-            //throw new Exception("Simulated failure");
+            throw new Exception("Simulated failure");
         });
         EndDemo();
     }        
