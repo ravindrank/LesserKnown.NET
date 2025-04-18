@@ -1,9 +1,4 @@
-﻿using BenchmarkDotNet.Running;
-using LesserKnown.NET.Libraries;
-using System.Diagnostics;
-using System.Numerics;
-
-namespace LesserKnown.NET;
+﻿namespace LesserKnown.NET;
 
 public class Program
 {
@@ -11,37 +6,37 @@ public class Program
     {
         Util.PrintDemoStart("MainDemo");
 
-        var pollyTestDemo = new PollyDemo();
+        //var pollyTestDemo = new PollyDemo();
         //pollyTestDemo.Run();
 
-        var pInvokeTestDemo = new PInvokeDemo();
+        //var pInvokeTestDemo = new PInvokeDemo();
         //pInvokeTestDemo.Run();
 
-        var exprTestDemo = new ExprsDemo();
+        //var exprTestDemo = new ExprsDemo();
         //exprTestDemo.Run();
 
-        var spanTestDemo = new SpanTDemo();
+        //var spanTestDemo = new SpanTDemo();
         //spanTestDemo.Run();
 
-        var memTestDemo = new MemoryTDemo();
+        //var memTestDemo = new MemoryTDemo();
         //memTestDemo.Run();
 
         //Fody Demo
-        FodyDemo fodyDemo = new FodyDemo();
+        //FodyDemo fodyDemo = new FodyDemo();
         //fodyDemo.Run();
 
         // Message Pack Demo
-        MessagePackDemo mpDemo = new MessagePackDemo();   
+        //MessagePackDemo mpDemo = new MessagePackDemo();   
         //mpDemo.Run();
 
         // Dynamic code gen Demo
-        DynamicCodeGenDemo dynamicCodeGenDemo = new DynamicCodeGenDemo();
+        //DynamicCodeGenDemo dynamicCodeGenDemo = new DynamicCodeGenDemo();
         //dynamicCodeGenDemo.Run();
 
-        HumanizerDemo humanizerDemo = new HumanizerDemo();
+        //HumanizerDemo humanizerDemo = new HumanizerDemo();
         //humanizerDemo.Run();
 
-        CancTokensDemo cancTokensDemo = new CancTokensDemo();
+        //CancTokensDemo cancTokensDemo = new CancTokensDemo();
         // await cancTokensDemo.Run();
 
         // If you run in Debug mode: you will see below message
@@ -50,11 +45,11 @@ public class Program
         // If you want to debug the benchmarks, please see https://benchmarkdotnet.org/articles/guides/troubleshooting.html#debugging-benchmarks.
 
         // Switch to Release mode before calling
-        BenchMarkRunnerDemo benchMarkRunnerDemo = new BenchMarkRunnerDemo();
+        //BenchMarkRunnerDemo benchMarkRunnerDemo = new BenchMarkRunnerDemo();
         //benchMarkRunnerDemo.Run();
 
-        LLMDemo lLMDemo = new LLMDemo();
-        lLMDemo.Run();
+        //LLMDemo lLMDemo = new LLMDemo();
+        //lLMDemo.Run();
 
         Util.PrintDemoEnd("MainDemo");
     }
