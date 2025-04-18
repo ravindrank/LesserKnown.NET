@@ -1,8 +1,9 @@
-﻿using OllamaSharp;
+﻿using Microsoft.Extensions.AI;
+using OllamaSharp;
 
 namespace LesserKnown.NET;
 
-public class LLMDemo: MainDemo
+public class OllamaSharpDemo: MainDemo
 {
     private Uri uri;
     private OllamaApiClient ollama;
@@ -20,14 +21,12 @@ public class LLMDemo: MainDemo
         string result = string.Empty;
         const int MaxWords = 30;
         const string cleanupEnd = "</think>";
-        string prompt = $"Generate a summary within {MaxWords} words for a technical project having a project type of {projectType} involving domains like {domains} and technologies like {technologies}";
+        string prompt = $"Generate a summary within {MaxWords} words for a technical project having a project type of {projectType}" +
+            $" involving domains like {domains} and technologies like {technologies}";
 
         Console.WriteLine($"\nUsing prompt:{prompt}");
-
         await foreach (var answerToken in chat.SendAsync(prompt))
             result += answerToken;
-
-        //Console.WriteLine($"\nGot result:{result}\n Cleaning up...");
 
         var thinkEnd = result.IndexOf(cleanupEnd);
         var final = result
@@ -48,4 +47,5 @@ public class LLMDemo: MainDemo
         GenerateDetailsUsingLLM("DemoProject", "Web App", "Finance, Health", "C#, .NET, SQL Server").Wait();
         EndDemo();
     }
+
 }

@@ -48,8 +48,11 @@ public class Program
         //BenchMarkRunnerDemo benchMarkRunnerDemo = new BenchMarkRunnerDemo();
         //benchMarkRunnerDemo.Run();
 
-        //LLMDemo lLMDemo = new LLMDemo();
-        //lLMDemo.Run();
+        OllamaSharpDemo ollamaSharpDemo = new OllamaSharpDemo();
+        ollamaSharpDemo.Run();
+
+        //MSAIExtensionsDemo msAIExtensionsDemo = new MSAIExtensionsDemo();
+        //msAIExtensionsDemo.Run();
 
         Util.PrintDemoEnd("MainDemo");
     }
