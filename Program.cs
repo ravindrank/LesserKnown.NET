@@ -1,4 +1,5 @@
 ﻿using BenchmarkDotNet.Running;
+using LesserKnown.NET.Libraries;
 using System.Diagnostics;
 using System.Numerics;
 
@@ -41,7 +42,7 @@ public class Program
         //humanizerDemo.Run();
 
         CancTokensDemo cancTokensDemo = new CancTokensDemo();
-        await cancTokensDemo.Run();
+        // await cancTokensDemo.Run();
 
         // If you run in Debug mode: you will see below message
         //    * Assembly LesserKnown.NET which defines benchmarks is non-optimized
@@ -51,6 +52,9 @@ public class Program
         // Switch to Release mode before calling
         BenchMarkRunnerDemo benchMarkRunnerDemo = new BenchMarkRunnerDemo();
         //benchMarkRunnerDemo.Run();
+
+        LLMDemo lLMDemo = new LLMDemo();
+        lLMDemo.Run();
 
         Util.PrintDemoEnd("MainDemo");
     }
