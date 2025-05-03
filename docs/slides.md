@@ -42,7 +42,7 @@ Usage with Records: In record classes\, primary constructor parameters are synth
 
 # Init-Only Properties - Demo
 
-![](img%5CLesser%20Known%20NETv21_0.png)
+![](img\LesserKnownNETv21_0.png)
 
 # Span & Memory
 
@@ -90,9 +90,9 @@ A more general\-purpose type for representing contiguous memory
 
 # Span - Demo
 
-![](img%5CLesser%20Known%20NETv21_1.png)
+![](img\LesserKnownNETv21_1.png)
 
-![](img%5CLesser%20Known%20NETv21_2.png)
+![](img\LesserKnownNETv21_2.png)
 
 ---
 
@@ -100,7 +100,7 @@ Span<T> and Memory<T> are powerful tools in modern C# for writing efficient and 
 
 # Memory - Demo
 
-![](img%5CLesser%20Known%20NETv21_3.png)
+![](img\LesserKnownNETv21_3.png)
 
 # Interoperability with Platform Invoke (PInvoke)
 
@@ -122,7 +122,7 @@ You typically use the DllImportAttribute to specify the DLL containing the unman
 
 # PInvoke - Demo
 
-![](img%5CLesser%20Known%20NETv21_4.png)
+![](img\LesserKnownNETv21_4.png)
 
 ---
 
@@ -188,9 +188,9 @@ The dynamic keyword offers significant flexibility and simplifies interoperabili
 
 # dynamic - Demo
 
-![](img%5CLesser%20Known%20NETv21_5.png)
+![](img\LesserKnownNETv21_5.png)
 
-![](img%5CLesser%20Known%20NETv21_6.png)
+![](img\LesserKnownNETv21_6.png)
 
 # Dynamic Code Generation
 
@@ -261,9 +261,9 @@ Dynamic code generation is a powerful feature in .NET that enables advanced prog
 
 # Dynamic Code Generation - Demo
 
-![](img%5CLesser%20Known%20NETv21_7.png)
+![](img\LesserKnownNETv21_7.png)
 
-![](img%5CLesser%20Known%20NETv21_8.png)
+![](img\LesserKnownNETv21_8.png)
 
 # Diving Deep into Expression Trees
 
@@ -319,9 +319,9 @@ Expression trees provide a powerful mechanism for interacting with code as data,
 
 # Expression Trees - Demo
 
-![](img%5CLesser%20Known%20NETv21_9.png)
+![](img\LesserKnownNETv21_9.png)
 
-![](img%5CLesser%20Known%20NETv21_10.png)
+![](img\LesserKnownNETv21_10.png)
 
 # Managing Asynchronous Operations with Cancellation Tokens
 
@@ -351,9 +351,9 @@ Calling code can use a try\-catch block to handle the OperationCanceledException
 
 # Cancellation tokens - Demo
 
-![](img%5CLesser%20Known%20NETv21_11.png)
+![](img\LesserKnownNETv21_11.png)
 
-![](img%5CLesser%20Known%20NETv21_12.png)
+![](img\LesserKnownNETv21_12.png)
 
 # Enhancing Resilience with the Polly Library
 
@@ -399,7 +399,7 @@ Simplified Fault Handling: Provides an easy and expressive way to implement comp
 
 Customizable Policies: Polly's policies are highly customizable to fit the specific needs of your application\.
 
-![](img%5CLesser%20Known%20NETv21_13.png)
+![](img\LesserKnownNETv21_13.png)
 
 ---
 
@@ -483,9 +483,9 @@ Fody offers a powerful way to streamline your .NET development by automating cod
 
 # Fody - Demo
 
-![](img%5CLesser%20Known%20NETv21_14.png)
+![](img\LesserKnownNETv21_14.png)
 
-![](img%5CLesser%20Known%20NETv21_15.png)
+![](img\LesserKnownNETv21_15.png)
 
 # Humanizer
 
@@ -532,9 +532,9 @@ It's a powerful yet "lesser-known" gem that can significantly improve the usabil
 
 # Humanizer - Demo
 
-![](img%5CLesser%20Known%20NETv21_16.png)
+![](img\LesserKnownNETv21_16.png)
 
-![](img%5CLesser%20Known%20NETv21_17.png)
+![](img\LesserKnownNETv21_17.png)
 
 # Efficient Serialization with MessagePack
 
@@ -567,13 +567,13 @@ In summary, MessagePack is a powerful library for .NET developers seeking high-p
 
 # Message Pack - Demo
 
-![](img%5CLesser%20Known%20NETv21_18.png)
+![](img\LesserKnownNETv21_18.png)
 
-![](img%5CLesser%20Known%20NETv21_19.png)
+![](img\LesserKnownNETv21_19.png)
 
-![](img%5CLesser%20Known%20NETv21_20.png)
+![](img\LesserKnownNETv21_20.png)
 
-![](img%5CLesser%20Known%20NETv21_21.png)
+![](img\LesserKnownNETv21_21.png)
 
 # Measure Performance Easily with BenchmarkDotNet
 
@@ -618,7 +618,7 @@ BenchmarkDotNet is an essential tool for any .NET developer looking to understan
 
 # BenchmarkDotNet - Demo
 
-![](img%5CLesser%20Known%20NETv21_22.png)
+![](img\LesserKnownNETv21_22.png)
 
 # Run Language Models in .NET with OllamaSharp
 
@@ -659,9 +659,9 @@ In summary, LLamaSharp brings the capabilities of large language models to the .
 
 # OllamaSharp - Demo
 
-![](img%5CLesser%20Known%20NETv21_23.png)
+![](img\LesserKnownNETv21_23.png)
 
-![](img%5CLesser%20Known%20NETv21_24.png)
+![](img\LesserKnownNETv21_24.png)
 
 # DotNetFiddle.net
 
